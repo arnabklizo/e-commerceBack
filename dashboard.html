@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FavIcon  -->
+    <link rel="apple-touch-icon" href="assets/Images/icon/favicon.png">
+    <link rel="shortcut icon" href="assets/Images/icon/favicon.png" type="image/x-icon">
+
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- customized css  -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+    <title>Coral -- Dashboard</title>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg py-3 me-0 sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="index.html">
+                <img src="assets/images/icon/logo.png" alt="coral">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="rightpannel navbar-nav dashboardMenuPannel ms-auto">
+                    <li class="nav-item">
+                        <form class="d-flex navSearchForm dashboard" role="search mx-2">
+                            <input class="navSearch" type="text" placeholder="Search product">
+                            <button class="btn btnSearch" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btnAcc" href="admin.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            data-bs-title="Profile" title="Profile">
+                            <span class="me-1"></span>
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown-center">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Admin
+                            </button>
+                            <ul class="dropdown-menu adminMenuDRp">
+                                <li>
+                                    <a href="reset-password.html" class="dropdown-item" type="button">
+                                        Change Password
+                                        <i class="fa-solid fa-unlock-keyhole ms-2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        Logout
+                                        <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main page  -->
+    <section class="dashboardSection d-flex">
+        <!-- sidebar  -->
+        <aside class="sidebarDeashboard border-top">
+            <div class="dashboardTopper w-100 border-bottom d-flex align-items-center">
+                <!-- <h1 class="roboto text-center w-100">Dashboard</h1> -->
+                <label class="closeDash">
+                    <input type="checkbox" class="dashChecker">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+            <div class="dasboard-list p-1 border-bottom">
+                <ul class="list-unstyled d-flex flex-column">
+                    <li class="py-1">
+                        <a class=" btn btnDashboardDVisited d-flex align-items-center m-auto text-decoration-none fs-5"
+                            disaabled>
+                            <i class="fa-solid fa-boxes-stacked me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                DashBoard
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="all-products.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-dolly me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                All Products
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="order-list.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-truck-ramp-box me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                Order List
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="all-users.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-users me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                All users
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="category-list.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-list me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                Catagory list
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="py-2 px-3 categoryBox">
+
+            </div>
+        </aside>
+        <!-- sidebar end  -->
+
+
+        <!-- main page right side -->
+        <div class="container dashBoardContainer">
+            <!-- page header  -->
+            <h1 class="text-center py-3 roboto sectHead text-capitalize text-dark">
+                dashboard
+            </h1>
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <div class="timeNow text-dark fw-bolder"></div>
+                <a href="add-new-product.html" class="btn btn-dark addPrdct">
+                    <span class="text-light"><i class="fa-solid fa-circle-plus"></i></span>
+                    <span class="text-uppercase text-light">Add new product</span>
+                </a>
+            </div>
+            <!-- main page top cards  -->
+            <div class="row">
+                <div class="col-12 col-xl-3 col-lg-6 my-1">
+                    <div class="border dashTopper rounded d-flex p-2 align-items-center justify-content-evenly">
+                        <div class="itmHd">
+                            <h2 class="fw-bolder fs-4 text-dark">17098</h2>
+                            <span class="fw-bolder">Total Ordered</span>
+                        </div>
+                        <div class="logohd">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-3 col-lg-6 my-1">
+                    <div class="border dashTopper rounded d-flex p-2 align-items-center justify-content-evenly">
+                        <div class="itmHd">
+                            <h2 class="fw-bolder fs-4 text-dark">107</h2>
+                            <span class="fw-bolder">Ordered Today</span>
+                        </div>
+                        <div class="logohd">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-3 col-lg-6 my-1">
+                    <div class="border dashTopper rounded d-flex p-2 align-items-center justify-content-evenly">
+                        <div class="itmHd">
+                            <h2 class="fw-bolder fs-4 text-dark">357</h2>
+                            <span class="fw-bolder">In Transit</span>
+                        </div>
+                        <div class="logohd">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-3 col-lg-6 my-1">
+                    <div class="border dashTopper rounded d-flex p-2 align-items-center justify-content-evenly">
+                        <div class="itmHd">
+                            <h2 class="fw-bolder fs-4 text-dark">6945</h2>
+                            <span class="fw-bolder">Total Users</span>
+                        </div>
+                        <div class="logohd">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- recent Ordered  -->
+            <div class="row pt-3">
+                <div class="col-12 col-xl-6 my-1">
+                    <div class="pannelDashed pannelDashedleft bg-light rounded border p-3">
+                        <h1 class="fs-3 py-3 roboto sectHead text-capitalize text-dark">
+                            Recent Transaction
+                        </h1>
+                        <table class="w-100">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Name
+                                        <button class="shortButton border-0 bg-transparent mx-1">
+                                            <span class="asc d-none">
+                                                <i class="fa-solid fa-arrow-down-a-z"></i>
+                                            </span>
+                                            <span class="desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                    <th>
+                                        Date
+                                        <button class="shortButton border-0 bg-transparent mx-1">
+                                            <span class="asc d-none">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                                <i class="fa-solid fa-arrow-up-long"></i>
+                                            </span>
+                                            <span class="desc">
+                                                <i class="fa-solid fa-calendar-days"></i>
+                                                <i class="fa-solid fa-arrow-down-long"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                    <th>
+                                        Ammount
+                                        <button class="shortButton border-0 bg-transparent mx-1">
+                                            <span class="asc d-none">
+                                                <i class="fa-solid fa-arrow-down-wide-short"></i>
+                                            </span>
+                                            <span class="desc">
+                                                <i class="fa-solid fa-arrow-down-short-wide"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jagarnath S.</td>
+                                    <td>24.08.2024</td>
+                                    <td>&#8377;<span class="ammountTable">124.97</span></td>
+                                    <td><span class="paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Pankaj Tripathi</td>
+                                    <td>23.08.2028</td>
+                                    <td>&#8377;<span class="ammountTable">4565.34</span></td>
+                                    <td><span class="pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Akash Boss</td>
+                                    <td>23.08.2024</td>
+                                    <td>&#8377;<span class="ammountTable">465.25</span></td>
+                                    <td><span class="paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Sarkar S.</td>
+                                    <td>23.08.2028</td>
+                                    <td>&#8377;<span class="ammountTable">415.25</span></td>
+                                    <td><span class="paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Moon Sun</td>
+                                    <td>23.08.2028</td>
+                                    <td>&#8377;<span class="ammountTable">256.12</span></td>
+                                    <td><span class="paid">Paid</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jagarnath S.</td>
+                                    <td>23.08.2028</td>
+                                    <td>&#8377;<span class="ammountTable">97</span></td>
+                                    <td><span class="pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Jagarnath S.</td>
+                                    <td>23.08.2028</td>
+                                    <td>&#8377;<span class="ammountTable">127</span></td>
+                                    <td><span class="paid">Paid</span></td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-6 my-1">
+                    <div class="pannelDashed pannelDashedright bg-light rounded border p-3">
+                        <h1 class="fs-3 py-3 roboto sectHead text-capitalize text-dark">
+                            Top Products by Units Sold
+                        </h1>
+                        <table class="w-100">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Name
+                                        <button class="shortButton border-0 bg-transparent mx-1">
+                                            <span class="asc d-none">
+                                                <i class="fa-solid fa-arrow-down-a-z"></i>
+                                            </span>
+                                            <span class="desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                    <th>
+                                        Price
+                                        <button class="shortButton border-0 bg-transparent mx-1">
+                                            <span class="asc d-none">
+                                                <i class="fa-solid fa-arrow-down-wide-short"></i>
+                                            </span>
+                                            <span class="desc">
+                                                <i class="fa-solid fa-arrow-down-short-wide"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                    <th>
+                                        Unit Sold
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Adicolor Classics Joggers.</td>
+                                    <td>&#8377;<span class="ammountTable">549</span></td>
+                                    <td>123</td>
+                                </tr>
+                                <tr>
+                                    <td>Nike Sportswear Futura Luxe</td>
+                                    <td>&#8377;<span class="ammountTable">2199</span></td>
+                                    <td>654</td>
+                                </tr>
+                                <tr>
+                                    <td>Geometric print Scarf</td>
+                                    <td>&#8377;<span class="ammountTable">349</span></td>
+                                    <td>54</td>
+                                </tr>
+                                <tr>
+                                    <td>Yellow Reserved Hoodie</td>
+                                    <td>&#8377;<span class="ammountTable">2599</span></td>
+                                    <td>6541</td>
+                                </tr>
+                                <tr>
+                                    <td>Basic Dress Green</td>
+                                    <td>&#8377;<span class="ammountTable">2449.12</span></td>
+                                    <td>654</td>
+                                </tr>
+                                <tr>
+                                    <td>Nike Air Zoom Pegasus</td>
+                                    <td>&#8377;<span class="ammountTable">2999.7</span></td>
+                                    <td>698</td>
+                                </tr>
+                                <tr>
+                                    <td>Nike Repel Miler</td>
+                                    <td>&#8377;<span class="ammountTable">127</span></td>
+                                    <td>447</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main page right side -->
+    </section>
+
+
+
+
+
+
+
+
+    <!-- footer  -->
+    <footer class="">
+        <div class="footerLast d-flex align-items-center justify-content-center">
+            <div class="m-auto text-light">
+                &copy; <span class="currentYear text-light">2024</span> - CORAL
+            </div>
+        </div>
+
+        <!-- back to top button  -->
+        <div class="backToTop d-none">
+            <i class="fa-solid fa-circle-up"></i>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- js  -->
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+
+
+</body>
+
+</html>

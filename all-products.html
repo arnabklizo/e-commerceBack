@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FavIcon  -->
+    <link rel="apple-touch-icon" href="assets/Images/icon/favicon.png">
+    <link rel="shortcut icon" href="assets/Images/icon/favicon.png" type="image/x-icon">
+
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- customized css  -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- page css  -->
+    <link rel="stylesheet" href="assets/css/all-products.css">
+
+    <title>Coral -- Dashboard</title>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg py-3 me-0 sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="index.html">
+                <img src="assets/images/icon/logo.png" alt="coral">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="rightpannel navbar-nav dashboardMenuPannel ms-auto">
+                    <li class="nav-item">
+                        <form class="d-flex navSearchForm dashboard" role="search mx-2">
+                            <input class="navSearch" type="text" placeholder="Search product">
+                            <button class="btn btnSearch" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btnAcc" href="admin.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            data-bs-title="Profile" title="Profile">
+                            <span class="me-1"></span>
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown-center">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Admin
+                            </button>
+                            <ul class="dropdown-menu adminMenuDRp">
+                                <li>
+                                    <a href="reset-password.html" class="dropdown-item" type="button">
+                                        Change Password
+                                        <i class="fa-solid fa-unlock-keyhole ms-2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        Logout
+                                        <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main page  -->
+    <section class="dashboardSection d-flex">
+        <!-- sidebar  -->
+        <aside class="sidebarDeashboard border-top">
+            <div class="dashboardTopper w-100 border-bottom d-flex align-items-center">
+                <!-- <h1 class="roboto text-center w-100">Dashboard</h1> -->
+                <label class="closeDash">
+                    <input type="checkbox" class="dashChecker">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+            <div class="dasboard-list p-1 border-bottom">
+                <ul class="list-unstyled d-flex flex-column">
+                    <li class="py-1">
+                        <a href="dashboard.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-boxes-stacked me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                DashBoard
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a class=" btn btnDashboardDVisited d-flex align-items-center m-auto text-decoration-none fs-5"
+                            disabled>
+                            <i class="fa-solid fa-dolly me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                All Products
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="order-list.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-truck-ramp-box me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                Order List
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="all-users.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-users me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                All users
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="category-list.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-list me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                Catagory list
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="py-2 px-3 categoryBox">
+
+
+
+            </div>
+        </aside>
+        <!-- sidebar end  -->
+
+
+        <!-- main page right side -->
+        <div class="container dashBoardContainer">
+            <!-- page header  -->
+            <h1 class="text-center py-3 roboto sectHead text-capitalize text-dark">
+                all products
+            </h1>
+            <div class="d-flex justify-content-between align-items-center py-3">
+                <div class="timeNow text-dark fw-bolder"></div>
+                <a href="add-new-product.html" class="btn btn-dark addPrdct">
+                    <span class="text-light"><i class="fa-solid fa-circle-plus"></i></span>
+                    <span class="text-uppercase text-light">Add new product</span>
+                </a>
+            </div>
+
+
+            <!-- filter and search btn  -->
+            <div class="silterSearch my-2 d-flex align-items-center justify-content-between">
+                <div class="filterBox d-flex align-items-center w-25">
+                    <label for="filterCategory" class="me-2 fw-bold">
+                        <i class="fa-solid fa-filter me-1"></i>
+                        Catagory :
+                    </label>
+                    <select id="filterCategory" class="form-select w-50" aria-label="Default select example">
+                        <option value="all" selected>All products</option>
+                        <option value="shirt">Shirt</option>
+                        <option value="bag">Bag</option>
+                        <option value="shoe">Shoe</option>
+                    </select>
+                </div>
+
+                <div class="filterBox d-flex align-items-center w-25 ms-sm-3">
+                    <form class="input-group">
+                        <button class="input-group-text">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input type="text" class="form-control" placeholder="Product Name">
+                    </form>
+                </div>
+
+            </div>
+
+
+            <!-- Product List  -->
+            <div class="pannelDashed pannelDashedallPrdct allProductTable bg-light rounded border p-3">
+                <h1 class="fs-3 py-3 roboto sectHead text-capitalize text-dark">
+                    all products <span class="fw-bold">(558)</span>
+                </h1>
+                <table class="w-100">
+                    <thead>
+                        <tr>
+                            <th>
+                                Product
+                                <button class="shortButton border-0 bg-transparent mx-1">
+                                    <span class="asc d-none">
+                                        <i class="fa-solid fa-arrow-down-a-z"></i>
+                                    </span>
+                                    <span class="desc">
+                                        <i class="fa-solid fa-arrow-down-z-a"></i>
+                                    </span>
+                                </button>
+                            </th>
+                            <th>
+                                Inventory
+                                <button class="shortButton border-0 bg-transparent mx-1">
+                                    <span class="asc d-none">
+                                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+                                    </span>
+                                    <span class="desc">
+                                        <i class="fa-solid fa-arrow-down-short-wide"></i>
+                                    </span>
+                                </button>
+                            </th>
+                            <th>
+                                Color
+                            </th>
+                            <th>
+                                Price
+                                <button class="shortButton border-0 bg-transparent mx-1">
+                                    <span class="asc d-none">
+                                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+                                    </span>
+                                    <span class="desc">
+                                        <i class="fa-solid fa-arrow-down-short-wide"></i>
+                                    </span>
+                                </button>
+                            </th>
+                            <th>
+                                Rating
+                            </th>
+                            <th>
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center prdctTble1s">
+                                    <div class="prdctPrv border me-1">
+                                        <img src="assets/images/products/hoodie.jpg" alt="" class="w-100">
+                                    </div>
+                                    <div>
+                                        <span class="prductName fw-bold">Men Yellow Hoodie</span>
+                                        <div class="categoryTable fw-bold">Dress</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                96 in stock
+                            </td>
+                            <td>
+                                yellow
+                            </td>
+                            <td>&#8377;<span class="ammountTable">1599</span></td>
+                            <td>5.0 (32 Votes)</td>
+                            <td>
+                                <div class="d-flex">
+                                    <a href="#" class="editBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Edit Product">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                    <a href="preview-product.html" class="prevwBtn tableBtn m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Preview Product">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
+                                    <button class="deltBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Delete Product">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center prdctTble1s">
+                                    <div class="prdctPrv border me-1">
+                                        <img src="assets/images/products/Bitmap (1).png" alt="" class="w-100">
+                                    </div>
+                                    <div>
+                                        <span class="prductName fw-bold">Men Grey Hoodie</span>
+                                        <div class="categoryTable fw-bold">Dress</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                70 in stock
+                            </td>
+                            <td>
+                                yellow
+                            </td>
+                            <td>&#8377;<span class="ammountTable">699</span></td>
+                            <td>5.0 (45 Votes)</td>
+                            <td>
+                                <div class="d-flex">
+                                    <a href="#" class="editBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Edit Product">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                    <a href="preview-product.html" class="prevwBtn tableBtn m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Preview Product">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
+                                    <button class="deltBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Delete Product">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center prdctTble1s">
+                                    <div class="prdctPrv border me-1">
+                                        <img src="assets/images/products/Bitmap.png" alt="" class="w-100">
+                                    </div>
+                                    <div>
+                                        <span class="prductName fw-bold">Women Striped T-Shirt</span>
+                                        <div class="categoryTable fw-bold">T-shirt</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                56 in stock
+                            </td>
+                            <td>
+                                black
+                            </td>
+                            <td>&#8377;<span class="ammountTable">599</span></td>
+                            <td>5.0 (22 Votes)</td>
+                            <td>
+                                <div class="d-flex">
+                                    <a href="#" class="editBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Edit Product">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                    <a href="preview-product.html" class="prevwBtn tableBtn m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Preview Product">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
+                                    <button class="deltBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Delete Product">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center prdctTble1s">
+                                    <div class="prdctPrv border me-1">
+                                        <img src="assets/images/products/Bitmap (3).png" alt="" class="w-100">
+                                    </div>
+                                    <div>
+                                        <span class="prductName fw-bold">Women White T-Shirt</span>
+                                        <div class="categoryTable fw-bold">T-Shirt</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                123 in stock
+                            </td>
+                            <td>
+                                Black
+                            </td>
+                            <td>&#8377;<span class="ammountTable">1799</span></td>
+                            <td>4.0 (32 Votes)</td>
+                            <td>
+                                <div class="d-flex">
+                                    <a href="#" class="editBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Edit Product">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                    <a href="preview-product.html" class="prevwBtn tableBtn m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Preview Product">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
+                                    <button class="deltBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Delete Product">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center prdctTble1s">
+                                    <div class="prdctPrv border me-1">
+                                        <img src="assets/images/products/Bitmap (2).png" alt="" class="w-100">
+                                    </div>
+                                    <div>
+                                        <span class="prductName fw-bold">Women Red T-Shirt</span>
+                                        <div class="categoryTable fw-bold">T-Shirt</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                45 in stock
+                            </td>
+                            <td>
+                                Red
+                            </td>
+                            <td>&#8377;<span class="ammountTable">799</span></td>
+                            <td>4.5 (65 Votes)</td>
+                            <td>
+                                <div class="d-flex">
+                                    <a href="#" class="editBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Edit Product">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </a>
+                                    <a href="preview-product.html" class="prevwBtn tableBtn m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Preview Product">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
+                                    <button class="deltBtn tableBtn m-1" data-bs-toggle="tooltip"
+                                        data-bs-placement="bottom" data-bs-title="Delete Product">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+            </div>
+
+            <!-- pagination  -->
+            <div class="d-flex border rounded align-items-center justify-content-between p-2 px-3 mt-3 bg-light mb-2">
+
+                <div class="productNumbers text-dark fw-bolder">
+                    <span class="fw-bold">558</span>
+                    Products
+                </div>
+
+                <div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination mb-0">
+                            <li class="page-item">
+                                <a class="page-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    data-bs-title="Previous Page">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link pageSelected" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item" disabled>
+                                <a class="page-link" disabled>...</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">111</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    data-bs-title="Next Page">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- main page right side -->
+    </section>
+
+
+
+
+
+
+
+
+    <!-- footer  -->
+    <footer class="">
+        <div class="footerLast d-flex align-items-center justify-content-center">
+            <div class="m-auto text-light">
+                &copy; <span class="currentYear text-light">2024</span> - CORAL
+            </div>
+        </div>
+
+        <!-- back to top button  -->
+        <div class="backToTop d-none">
+            <i class="fa-solid fa-circle-up"></i>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- js  -->
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+
+</body>
+
+</html>

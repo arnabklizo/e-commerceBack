@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FavIcon  -->
+    <link rel="apple-touch-icon" href="assets/Images/icon/favicon.png">
+    <link rel="shortcut icon" href="assets/Images/icon/favicon.png" type="image/x-icon">
+
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- customized css  -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- page css  -->
+    <link rel="stylesheet" href="assets/css/category-list.css">
+
+    <title>Coral -- Dashboard</title>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg py-3 me-0 sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="index.html">
+                <img src="assets/images/icon/logo.png" alt="coral">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="rightpannel navbar-nav dashboardMenuPannel ms-auto">
+                    <li class="nav-item">
+                        <form class="d-flex navSearchForm dashboard" role="search mx-2">
+                            <input class="navSearch" type="text" placeholder="Search product">
+                            <button class="btn btnSearch" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btnAcc" href="admin.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            data-bs-title="Profile" title="Profile">
+                            <span class="me-1"></span>
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown-center">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Admin
+                            </button>
+                            <ul class="dropdown-menu adminMenuDRp">
+                                <li>
+                                    <a href="reset-password.html" class="dropdown-item" type="button">
+                                        Change Password
+                                        <i class="fa-solid fa-unlock-keyhole ms-2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        Logout
+                                        <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main page  -->
+    <section class="dashboardSection d-flex">
+        <!-- sidebar  -->
+        <aside class="sidebarDeashboard border-top">
+            <div class="dashboardTopper w-100 border-bottom d-flex align-items-center">
+                <!-- <h1 class="roboto text-center w-100">Dashboard</h1> -->
+                <label class="closeDash">
+                    <input type="checkbox" class="dashChecker">
+                    <svg viewBox="0 0 32 32">
+                        <path class="line line-top-bottom"
+                            d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                        </path>
+                        <path class="line" d="M7 16 27 16"></path>
+                    </svg>
+                </label>
+            </div>
+            <div class="dasboard-list p-1 border-bottom">
+                <ul class="list-unstyled d-flex flex-column">
+                    <li class="py-1">
+                        <a href="dashboard.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-boxes-stacked me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                DashBoard
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="all-products.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-dolly me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                All Products
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="order-list.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-truck-ramp-box me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                Order List
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="all-users.html"
+                            class=" btn btnDashboard d-flex align-items-center m-auto text-decoration-none fs-5">
+                            <i class="fa-solid fa-users me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                All users
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a class=" btn btnDashboardDVisited d-flex align-items-center m-auto text-decoration-none fs-5"
+                            disabled>
+                            <i class="fa-solid fa-list me-3"></i>
+                            <span class="dashdMenu fw-bold">
+                                Category list
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="py-2 px-3 categoryBox">
+
+            </div>
+        </aside>
+        <!-- sidebar end  -->
+
+
+        <!-- main page right side -->
+        <div class="container dashBoardContainer">
+            <!-- page header  -->
+            <h1 class="text-center py-3 roboto sectHead text-capitalize text-dark">
+                All catagories
+            </h1>
+
+            <!-- filter and search btn  -->
+            <div class="row">
+                <div class="col-12 col-xl-6 mb-2">
+                    <div class="silterSearch my-2 d-flex align-items-center">
+
+                        <div class="filterBox d-flex align-items-center w-50">
+                            <form class="input-group">
+                                <input type="text" class="form-control" placeholder="Search product">
+                                <button class="input-group-text">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 mb-2">
+                    <div class="timeNow text-dark fw-bolder h-100 d-flex align-items-center justify-content-end pb-1">
+                        <!-- recent time is showing here  -->
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Product List  -->
+            <div class="pannelDashed pannelDashedOrdrList categoryListTable bg-light rounded border p-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="fs-3 py-3 roboto sectHead text-capitalize text-dark">
+                        All Category <span class="fw-bold">(28)</span>
+                    </h1>
+                    <div class="d-flex justify-content-end align-items-center">
+                        <button class="categoryAddBtn btn btn-dark align-items-center d-flex fs-5 fw-bold mb-3"
+                            type="button" data-bs-target="#addCategory" data-bs-toggle="modal">
+                            <i class="fa-solid fa-circle-plus me-2"></i>
+                            Add Category
+                        </button>
+                    </div>
+                </div>
+                <table class="w-100">
+                    <thead>
+                        <tr>
+                            <th>
+                                Product Name
+                                <button class="shortButton border-0 bg-transparent mx-1">
+                                    <span class="asc d-none">
+                                        <i class="fa-solid fa-arrow-down-a-z"></i>
+                                    </span>
+                                    <span class="desc">
+                                        <i class="fa-solid fa-arrow-down-z-a"></i>
+                                    </span>
+                                </button>
+                            </th>
+                            <th>
+                                Items
+                                <button class="shortButton border-0 bg-transparent mx-1">
+                                    <span class="asc d-none">
+                                        <i class="fa-solid fa-arrow-down-wide-short"></i>
+                                    </span>
+                                    <span class="desc">
+                                        <i class="fa-solid fa-arrow-down-short-wide"></i>
+                                    </span>
+                                </button>
+                            </th>
+
+                            <th>
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <span class="catPicIc">
+                                        <img src="assets/images/icon/catIc (6).png" alt=""
+                                            class="catIconPics w-100 h-100">
+                                    </span>
+                                    <span class="catNamess fw-bold ms-2">
+                                        Men T-shirts
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="productNumbs">38</span> Items
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <button class="editRegisteredBtn rounded border text-dark p-2 m-1" type="button"
+                                        data-bs-target="#editCategoryModal" data-bs-toggle="modal">
+                                        <i class="fa-solid fa-pencil"></i>
+                                        Edit This Category
+                                    </button>
+
+
+                                    <button class="editRegister rounded border text-dark p-2 m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Delete this category">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                        Delete this category
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <span class="catPicIc">
+                                        <img src="assets/images/icon/catIc (8).png" alt=""
+                                            class="catIconPics w-100 h-100">
+                                    </span>
+                                    <span class="catNamess fw-bold ms-2">
+                                        Women T-shirts
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="productNumbs">19</span> Items
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <button class="editRegisteredBtn rounded border text-dark p-2 m-1" type="button"
+                                        data-bs-target="#editCategoryModal" data-bs-toggle="modal">
+                                        <i class="fa-solid fa-pencil"></i>
+                                        Edit This Category
+                                    </button>
+
+
+                                    <button class="editRegister rounded border text-dark p-2 m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Delete this category">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                        Delete this category
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <span class="catPicIc">
+                                        <img src="assets/images/icon/catIc (4).png" alt=""
+                                            class="catIconPics w-100 h-100">
+                                    </span>
+                                    <span class="catNamess fw-bold ms-2">
+                                        Wrist watch
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="productNumbs">26</span> Items
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <button class="editRegisteredBtn rounded border text-dark p-2 m-1" type="button"
+                                        data-bs-target="#editCategoryModal" data-bs-toggle="modal">
+                                        <i class="fa-solid fa-pencil"></i>
+                                        Edit This Category
+                                    </button>
+                                    <button class="editRegister rounded border text-dark p-2 m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Delete this category">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                        Delete this category
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <span class="catPicIc">
+                                        <img src="assets/images/icon/catIc (7).png" alt=""
+                                            class="catIconPics w-100 h-100">
+                                    </span>
+                                    <span class="catNamess fw-bold ms-2">
+                                        Glasses
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="productNumbs">55</span> Items
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <button class="editRegisteredBtn rounded border text-dark p-2 m-1" type="button"
+                                        data-bs-target="#editCategoryModal" data-bs-toggle="modal">
+                                        <i class="fa-solid fa-pencil"></i>
+                                        Edit This Category
+                                    </button>
+                                    <button class="editRegister rounded border text-dark p-2 m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Delete this category">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                        Delete this category
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <span class="catPicIc">
+                                        <img src="assets/images/products/profp.png" alt=""
+                                            class="catIconPics w-100 h-100">
+                                    </span>
+                                    <span class="catNamess fw-bold ms-2">
+                                        Hats
+                                    </span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="productNumbs">12</span> Items
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <button class="editRegisteredBtn rounded border text-dark p-2 m-1" type="button"
+                                        data-bs-target="#editCategoryModal" data-bs-toggle="modal">
+                                        <i class="fa-solid fa-pencil"></i>
+                                        Edit This Category
+                                    </button>
+                                    <button class="editRegister rounded border text-dark p-2 m-1"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        data-bs-title="Delete this category">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                        Delete this category
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <!-- pagination  -->
+            <div class="d-flex border rounded align-items-center justify-content-between p-2 px-3 mt-3 bg-light mb-2">
+                <div class="productNumbers text-dark fw-bolder">
+                    <span class="fw-bold">28</span>
+                    Categories
+                </div>
+                <div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination mb-0">
+                            <li class="page-item">
+                                <a class="page-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    data-bs-title="Previous Page">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link pageSelected" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <!-- <li class="page-item" disabled>
+                                <a class="page-link" disabled>...</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">111</a>
+                            </li> -->
+                            <li class="page-item">
+                                <a class="page-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    data-bs-title="Next Page">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- main page right side -->
+    </section>
+
+
+
+
+
+
+
+
+    <!-- footer  -->
+    <footer class="">
+        <div class="footerLast d-flex align-items-center justify-content-center">
+            <div class="m-auto text-light">
+                &copy; <span class="currentYear text-light">2024</span> - CORAL
+            </div>
+        </div>
+
+        <!-- back to top button  -->
+        <div class="backToTop d-none">
+            <i class="fa-solid fa-circle-up"></i>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- modal for New Category  -->
+    <div class="modal fade" id="addCategory" aria-hidden="true" aria-labelledby="addCategoryLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-dark" id="addCategoryLabel">Add New Category</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="categoryName" class="form-control" id="categoryName"
+                                placeholder="Name of Category">
+                            <label for="categoryName">Category Name</label>
+                        </div>
+                        <div class="upload-container">
+                            <div id="dropping-area" class="dropping-area text-center">
+                                <label for="cat-input" class="upload-btn btn mb-3 btn-outline-primary">Click to
+                                    upload</label>
+                                <p>Drag & Drop your picture here or</p>
+                                <input type="file" id="cat-input" class="cat-input" accept="image/*">
+                            </div>
+                            <div id="cat-preview" class="image-preview m-auto"></div>
+                            <hr>
+                        </div>
+                        <div class="text-center pt-2 mt-2">
+                            <button class="btn btn-dark" type="submit">Create Category</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for edit category  -->
+    <div class="modal fade" id="editCategoryModal" aria-hidden="true" aria-labelledby="editCategoryModalLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-dark" id="editCategoryModalLabel">Edit Category</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="categoryName" class="form-control" id="categoryName"
+                                placeholder="Name of Category" value="Sun Glass">
+                            <label for="categoryName">Category Name</label>
+                        </div>
+                        <div class="upload-container">
+                            <div id="dropping1-area" class="dropping-area text-center">
+                                <label for="cat1-input" class="upload-btn btn mb-3 btn-outline-primary">Click to
+                                    upload</label>
+                                <p>Drag & Drop your picture here or</p>
+                                <input type="file" id="cat1-input" class="cat-input" accept="image/*">
+                            </div>
+                            <div id="cat1-preview" class="image-preview m-auto">
+                                <img src="assets/images/icon/catIc (3).png" alt="" class="d-block">
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="text-center pt-2 mt-2">
+                            <button class="btn btn-dark" type="submit">Create Category</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- js  -->
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+
+
+
+    <script>
+
+        // to add new category 
+
+        // Get references to the elements
+        const dropingArea = document.getElementById('dropping-area');
+        const catInput = document.getElementById('cat-input');
+        const catPreview = document.getElementById('cat-preview');
+
+
+
+
+        // Add drag-and-drop event listeners
+        dropingArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropingArea.style.backgroundColor = '#e0e0e0'; // Highlight on drag over
+        });
+
+        dropingArea.addEventListener('dragleave', () => {
+            dropingArea.style.backgroundColor = '#fafafa'; // Revert highlight when drag leaves
+        });
+
+
+        dropingArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropingArea.style.backgroundColor = '#fafafa'; // Revert highlight after drop
+            catFileUpld(e.dataTransfer.files);
+        });
+
+
+        // Handle file selection by clicking the input
+        catInput.addEventListener('change', (e) => {
+            catFileUpld(e.target.files);
+        });
+
+
+        // Handle the file upload logic
+        function catFileUpld(files) {
+            const file = files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    const img = document.createElement('img');
+                    img.src = reader.result;
+                    catPreview.innerHTML = '';
+                    catPreview.appendChild(img);
+                    img.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert('Please upload a valid image file.');
+            }
+        }
+
+
+
+
+
+
+
+
+
+        // to edit category 
+
+
+        // Get references to the elements
+        const droping1Area = document.getElementById('dropping1-area');
+        const cat1Input = document.getElementById('cat1-input');
+        const cat1Preview = document.getElementById('cat1-preview');
+
+
+
+
+        // Add drag-and-drop event listeners
+        droping1Area.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            droping1Area.style.backgroundColor = '#e0e0e0'; // Highlight on drag over
+        });
+
+        droping1Area.addEventListener('dragleave', () => {
+            droping1Area.style.backgroundColor = '#fafafa'; // Revert highlight when drag leaves
+        });
+
+
+        droping1Area.addEventListener('drop', (e) => {
+            e.preventDefault();
+            droping1Area.style.backgroundColor = '#fafafa'; // Revert highlight after drop
+            catFileUplds(e.dataTransfer.files);
+        });
+
+
+        // Handle file selection by clicking the input
+        cat1Input.addEventListener('change', (e) => {
+            catFileUplds(e.target.files);
+        });
+
+
+        // Handle the file upload logic
+        function catFileUplds(files) {
+            const file = files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    const img = document.createElement('img');
+                    img.src = reader.result;
+                    cat1Preview.innerHTML = '';
+                    cat1Preview.appendChild(img);
+                    img.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert('Please upload a valid image file.');
+            }
+        }
+    </script>
+</body>
+
+</html>

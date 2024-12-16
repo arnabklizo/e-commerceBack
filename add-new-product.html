@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FavIcon  -->
+    <link rel="apple-touch-icon" href="assets/Images/icon/favicon.png">
+    <link rel="shortcut icon" href="assets/Images/icon/favicon.png" type="image/x-icon">
+
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- customized css  -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- page css  -->
+    <link rel="stylesheet" href="assets/css/add-new-product.css">
+
+    <title>Coral -- Dashboard</title>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg py-3 me-0 sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="index.html">
+                <img src="assets/images/icon/logo.png" alt="coral">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="rightpannel navbar-nav dashboardMenuPannel ms-auto">
+                    <li class="nav-item">
+                        <form class="d-flex navSearchForm dashboard" role="search mx-2">
+                            <input class="navSearch" type="text" placeholder="Search product">
+                            <button class="btn btnSearch" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btnAcc" href="admin.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            data-bs-title="Profile" title="Profile">
+                            <span class="me-1"></span>
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown-center">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Admin
+                            </button>
+                            <ul class="dropdown-menu adminMenuDRp">
+                                <li>
+                                    <a href="reset-password.html" class="dropdown-item" type="button">
+                                        Change Password
+                                        <i class="fa-solid fa-unlock-keyhole ms-2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        Logout
+                                        <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="addednewProduct position-relative">
+        <div class="container">
+            <h1 class="text-center roboto sectHead text-capitalize text-dark pt-4 pb-3">
+                Add New Product
+            </h1>
+
+
+            <form class="rounded border newProduct p-3 mb-3" action="">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="fw-bolder text-dark fs-5 mb-3">Information</div>
+                        <div class="mb-3">
+                            <label for="nameOfProduct" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="nameOfProduct"
+                                placeholder="Type New Product Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="productDescription" class="form-label">Product Description</label>
+                            <div id="editor-container">
+                                <textarea name="editor" id="editor"></textarea>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="mb-3">
+                            <label for="productNumbs" class="form-label">Product in stock</label>
+                            <input type="text" class="form-control" id="productNumbs"
+                                placeholder="Enter number of stock">
+                        </div>
+                        <hr>
+                        <div class="fw-bolder text-dark fs-5 mb-3">Image</div>
+                        <div class="upload-container">
+                            <div id="drop-area" class="drop-area text-center">
+                                <label for="file-input" class="upload-btn btn mb-3 btn-outline-primary">Click to
+                                    upload</label>
+                                <p>Drag & Drop your picture here or</p>
+                                <input type="file" id="file-input" class="file-input" accept="image/*" multiple>
+                            </div>
+                            <div id="image-preview" class="image-preview m-auto"></div>
+                            <hr>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-lg-6">
+
+                        <div class="fw-bolder text-dark fs-5 mb-3">Price</div>
+
+                        <div class="mb-3">
+                            <label for="priceOfProduct" class="form-label">Product Price</label>
+                            <input type="text" class="form-control" id="priceOfProduct" placeholder="Enter Price">
+                        </div>
+                        <div class="mb-3">
+                            <label for="dicscPriceOfProduct" class="form-label">Discount Price</label>
+                            <input type="text" class="form-control" id="dicscPriceOfProduct"
+                                placeholder="Price at discount">
+                        </div>
+                        <hr>
+                        <div class="fw-bolder text-dark fs-5 mb-3">Product for</div>
+
+                        <select class="form-select mb-3" aria-label="">
+                            <option selected>Open this select menu</option>
+                            <option value="men">Men</option>
+                            <option value="women">Women</option>
+                            <option value="boy">Boy</option>
+                            <option value="girl">Girl</option>
+                            <option value="unisex">Unisex</option>
+                        </select>
+                        <hr>
+                        <div class="fw-bolder text-dark fs-5 mb-3">Add features for this product</div>
+                        <div class="d-flex align-items-center flex-column-reverse  flex-lg-row ">
+                            <div class="addFeatures btn btn-md btn-dark my-2" onclick="addItem()">
+                                Add product features
+                            </div>
+                            <input type="text" class="form-control featuresInp" id="itemInput"
+                                placeholder="Enter key point here">
+                        </div>
+
+                        <div class="text-dark fw-bold mt-4">Features and key points are :</div>
+                        <!-- Display the list of added items -->
+                        <ul id="listBox" class="list-unstyled keyPointList"></ul>
+
+
+                        <hr>
+                        <div class="fw-bolder text-dark fs-5 mb-3">Categories</div>
+
+                        <select class="form-select mb-4" aria-label="">
+                            <option selected>Open this select menu</option>
+                            <option value="dress">Dress</option>
+                            <option value="bag">Bag</option>
+                            <option value="glasses">Glasses</option>
+                            <option value="shoe">Shoe</option>
+                        </select>
+
+                        <button class="categoryAddBtn btn btn-dark align-items-center d-flex fs-5 fw-bold mb-3"
+                            type="button" data-bs-target="#addCategory" data-bs-toggle="modal">
+                            <i class="fa-solid fa-circle-plus me-2"></i>
+                            Add Category
+                        </button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-dark my-2">
+                        Save product details
+                    </button>
+                </div>
+            </form>
+            <div class="text-center mb-3">
+                <button class="btn goBackBtn btn-dark d-flex align-items-center justify-content-center"
+                    onclick="history.back()">
+                    <i class="fa-solid fa-left-long me-2"></i>
+                    <span class="text-light fw-bold">Back</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="">
+        <div class="footerLast d-flex align-items-center justify-content-center">
+            <div class="m-auto text-light">
+                &copy; <span class="currentYear text-light">2024</span> - CORAL
+            </div>
+        </div>
+        <!-- back to top button  -->
+        <div class="backToTop d-none">
+            <i class="fa-solid fa-circle-up"></i>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- modals  -->
+    <!-- modal for New Category  -->
+    <div class="modal fade" id="addCategory" aria-hidden="true" aria-labelledby="addCategoryLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-dark" id="addCategoryLabel">Add New Category</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-floating mb-3">
+                            <input type="text" name="categoryName" class="form-control" id="categoryName"
+                                placeholder="Name of Category">
+                            <label for="categoryName">Category Name</label>
+                        </div>
+                        <div class="upload-container">
+                            <div id="dropping-area" class="dropping-area text-center">
+                                <label for="cat-input" class="upload-btn btn mb-3 btn-outline-primary">Click to
+                                    upload</label>
+                                <p>Drag & Drop your picture here or</p>
+                                <input type="file" id="cat-input" class="cat-input" accept="image/*">
+                            </div>
+                            <div id="cat-preview" class="image-preview m-auto"></div>
+                            <hr>
+                        </div>
+                        <div class="text-center pt-2 mt-2">
+                            <button class="btn btn-dark" type="submit">Create Category</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- js  -->
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/newProduct.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+
+
+
+    <!-- page js for ck editor  -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+
+
+
+    <script>
+        function addItem() {
+            var itemText = document.querySelector('.featuresInp').value;
+            // If the input is not empty
+            if (itemText.trim() !== "") {
+                // Create a new list item (li element)
+                var li = document.createElement("li");
+
+                // Create the text for the list item
+                li.textContent = itemText;
+
+                // Create a delete button for each list item
+                var deleteButton = document.createElement("button");
+                deleteButton.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
+                deleteButton.onclick = function () {
+                    // Remove the list item when delete button is clicked
+                    li.remove();
+                };
+
+                // Append the delete button to the list item
+                li.appendChild(deleteButton);
+                document.getElementById('listBox').appendChild(li);
+
+                document.querySelector('.featuresInp').value = "";
+            } else {
+                alert("Please enter a valid item.");
+            }
+        }
+
+
+
+
+
+
+        // for ck editor 
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                toolbar: [
+                    'bold', 'italic', '|',
+                    'undo', 'redo'
+                ],
+                simpleUpload: {
+                    uploadUrl: '/upload-image', // This should be your image upload URL on the server
+                },
+                // Plugins like image upload, etc.
+                ckfinder: {
+                    uploadUrl: '/upload-image', // This can be your server-side upload handler for images
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+</body>
+
+</html>

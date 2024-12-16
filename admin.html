@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FavIcon  -->
+    <link rel="apple-touch-icon" href="assets/Images/icon/favicon.png">
+    <link rel="shortcut icon" href="assets/Images/icon/favicon.png" type="image/x-icon">
+
+    <!-- css  -->
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- customized css  -->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+
+    <!-- page css  -->
+    <link rel="stylesheet" href="assets/css/admin.css">
+
+    <!-- page css  -->
+    <title>Coral -- Admin</title>
+</head>
+
+<body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg py-3 me-0 sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="index.html">
+                <img src="assets/images/icon/logo.png" alt="coral">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="rightpannel navbar-nav dashboardMenuPannel ms-auto">
+                    <li class="nav-item">
+                        <form class="d-flex navSearchForm dashboard" role="search mx-2">
+                            <input class="navSearch" type="text" placeholder="Search product">
+                            <button class="btn btnSearch" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btnAcc" href="admin.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            data-bs-title="Profile" title="Profile">
+                            <span class="me-1"></span>
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown-center">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Admin
+                            </button>
+                            <ul class="dropdown-menu adminMenuDRp">
+                                <li>
+                                    <a href="reset-password.html" class="dropdown-item" type="button">
+                                        Change Password
+                                        <i class="fa-solid fa-unlock-keyhole ms-2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        Logout
+                                        <i class="fa-solid fa-right-from-bracket ms-2"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- section account details  -->
+    <section class="profileSection mb-4">
+        <div class="container">
+            <h1 class="text-center py-3 roboto sectHead text-capitalize text-dark">
+                Profile
+            </h1>
+
+            <div class="row">
+                <div class="col-12 col-xl-6 mx-auto">
+                    <div class="detProfBox rounded border my-3 my-xl-0">
+                        <!-- form starts for profile edit  -->
+                        <form action="">
+                            <div class="profileDetails d-flex align-items-center justify-content-start mb-4 p-2">
+                                <div class="rounded position-relative">
+                                    <img src="assets/images/products/profp.png" alt=""
+                                        class="profilePic border userPicture">
+                                    <label class="btn btnProfPicEdit position-absolute border-0 rounded"
+                                        for="userprofilePicture">
+                                        <i class="fa-solid fa-user-pen"></i>
+                                    </label>
+                                    <input type="file" id="userprofilePicture" class="d-none">
+                                </div>
+
+
+                                <div class="ms-3">
+                                    <div class="profname roboto fw-bold text-dark fs-3">Zerom Dotsure
+                                    </div>
+                                    <div class="registeredDate fw-bold text-dark">Registered : <span>Aug 17,2024</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profContact my-3 p-3">
+                                <h1 class="fs-4 fw-bold text-dark">Contact Details</h1>
+
+                                <hr>
+                                <div class="nameProf">
+                                    <div class="text-dark">Full Name</div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text prolfileDataInfo" id="profileName">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Enter Full Name"
+                                            aria-describedby="profileName" value="Zerom Dotsure" disabled>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="nameProf">
+                                    <div class="text-dark">Phone Number</div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text prolfileDataInfo" id="profileNumber">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Enter Mobile Number"
+                                            aria-describedby="profileNumber" value="012345678" disabled>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="nameProf">
+                                    <div class="text-dark">Email</div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text prolfileDataInfo" id="profileEmail">
+                                            <i class="fa-solid fa-pencil"></i>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Enter Email Address"
+                                            aria-describedby="profileEmail" value="zerom.otsure@email.com" disabled>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex">
+                                    <div class="text-dark">
+                                        <i class="fa-solid fa-user-tag me-1"></i>
+                                        Role :
+                                    </div>
+                                    <div class="ms-2">
+                                        Admin
+                                    </div>
+                                </div>
+
+                                <script>
+
+                                </script>
+                                <hr>
+                                <div class="text-center mt-2">
+                                    <button class="btn btn-dark updateDetails d-none">
+                                        Update Details
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                        <div class="text-center my-2">
+                            <button
+                                class="btn m-auto goBackBtn btn-dark d-flex align-items-center justify-content-center"
+                                onclick="history.back()">
+                                <i class="fa-solid fa-left-long me-2"></i>
+                                <span class="text-light fw-bold">Go back</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 mx-auto">
+                    <div class="bg-light detProfBox rounded border p-3 my-3 my-xl-0">
+                        <h1 class="fs-4 fw-bold text-dark">
+                            All admins
+                        </h1>
+                        <div class="adminTable my-2">
+                            <table class="w-100">
+                                <tr>
+                                    <th>
+                                        Name
+                                        <button class="shortButton border-0 bg-transparent mx-1">
+                                            <span class="asc d-none">
+                                                <i class="fa-solid fa-arrow-down-a-z"></i>
+                                            </span>
+                                            <span class="desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                    <th>
+                                        Email
+                                        <button class="shortButton border-0 bg-transparent mx-1">
+                                            <span class="asc d-none">
+                                                <i class="fa-solid fa-arrow-down-a-z"></i>
+                                            </span>
+                                            <span class="desc">
+                                                <i class="fa-solid fa-arrow-down-z-a"></i>
+                                            </span>
+                                        </button>
+                                    </th>
+                                    <th>Phone No.</th>
+                                    <th>Activate</th>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox">
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox">
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox">
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox" checked>
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox" checked>
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox">
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox" checked>
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox">
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox" checked>
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Firoj Sahab</td>
+                                    <td>firoj@sahabji.com</td>
+                                    <td>0123456789</td>
+                                    <td>
+                                        <div class="admin-activate">
+                                            <div id="button-3" class="btnToggleActivate">
+                                                <input class="checkActive" type="checkbox">
+                                                <div class="knobs"></div>
+                                                <div class="layer"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer  -->
+    <footer class="border-top">
+
+        <div class="footerLast d-flex align-items-center justify-content-center">
+            <div class="m-auto text-light">
+                &copy; <span class="currentYear text-light">2024</span> - CORAL
+            </div>
+        </div>
+
+        <!-- back to top button  -->
+        <div class="backToTop  d-none">
+            <i class="fa-solid fa-circle-up"></i>
+        </div>
+    </footer>
+
+
+
+    <!-- modal  -->
+
+    <!-- modal for edit category  -->
+
+
+
+    <!-- js  -->
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/backToTop.js"></script>
+    <script src="assets/js/profile.js"></script>
+
+
+</body>
+
+</html>
